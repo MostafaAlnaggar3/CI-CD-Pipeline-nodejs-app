@@ -20,7 +20,6 @@ pipeline {
                 sh '''
                     docker build . -f dockerfile -t mnaggar3396/jenkins-node-app
                     docker push mnaggar3396/jenkins-node-app
-                
                 '''
                 }
             }   
@@ -29,8 +28,10 @@ pipeline {
         stage('CD'){
             steps{
                 // to deploy node app as a k8s deployment
-                sh ' kubectl apply -f /home/mostafa-alnaggar/jenkins_home/workspace/nodeapp-pipeline/jenkins-app-deploy.yml 
-                     kubectl apply -f /home/mostafa-alnaggar/jenkins_home/workspace/nodeapp-pipeline/jenkins-app-svc.yml  '
+                sh ''' 
+                    kubectl apply -f /home/mostafa-alnaggar/jenkins_home/workspace/nodeapp-pipeline/jenkins-app-deploy.yml 
+                    kubectl apply -f /home/mostafa-alnaggar/jenkins_home/workspace/nodeapp-pipeline/jenkins-app-svc.yml  
+                '''
             }
         }
 
