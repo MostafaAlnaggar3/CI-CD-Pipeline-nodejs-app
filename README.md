@@ -4,6 +4,10 @@ Deploy a pipeline that builds a new docker image from a simple node application,
 
 ---
 
+## Infrastructure [Repo](https://github.com/MostafaAlnaggar3/Jenkins-on-GKE)
+
+---
+
 ## Repo components:
 
 - node-app: this directory have node app files.
@@ -79,7 +83,15 @@ Deploy a pipeline that builds a new docker image from a simple node application,
 </p>
 ---
 
-### 2- Add management instance as a Jenkins slave:
+### 2- Add management instance as a Jenkins slave:NAME                               READY   STATUS    RESTARTS   AGE
+pod/jenkins-app-6fbf66c86f-dq4zj   1/1     Running   0          95s
+
+NAME                      TYPE           CLUSTER-IP   EXTERNAL-IP      PORT(S)          AGE
+service/jenkins-app-svc   LoadBalancer   10.52.0.92   35.195.105.101   3000:31069/TCP   94s
+
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/jenkins-app   1/1     1            1           95s
+
 
 Node configurations:
 
