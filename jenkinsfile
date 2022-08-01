@@ -30,12 +30,10 @@ pipeline {
             steps{
                 // to deploy node app as a k8s deployment
                 sh ''' 
-                    kubectl apply -f /home/mostafa-alnaggar/jenkins_home/workspace/nodeapp-pipeline/jenkins-app-deploy.yml 
-                    kubectl apply -f /home/mostafa-alnaggar/jenkins_home/workspace/nodeapp-pipeline/jenkins-app-svc.yml  
+                    kubectl apply -f jenkins-app-deploy.yml 
+                    kubectl apply -f jenkins-app-svc.yml  
                 '''
             }
         }
-
-        
     }
 }
