@@ -1,0 +1,14 @@
+---
+apiVersion: "networking.k8s.io/v1"
+kind: "Ingress"
+metadata:
+  name: jenkins-app-ingress
+  namespace: jenkins-app
+spec:
+  defaultBackend:
+    service:
+      name: jenkins-app-svc
+      port:
+        number: 3000
+status:
+  loadBalancer: {}
