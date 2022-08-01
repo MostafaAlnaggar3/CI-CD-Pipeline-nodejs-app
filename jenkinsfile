@@ -31,8 +31,8 @@ pipeline {
                 // to deploy node app as a k8s deployment
                 sh ''' 
                     kubectl create ns jenkins-app
-                    kubectl apply -n jenkins-app -f jenkins-app-deploy.yml 
-                    kubectl apply -n jenkins-app -f jenkins-app-svc.yml  
+                    kubectl apply -n jenkins-app -f node-app-k8s/jenkins-app-deploy.yml 
+                    kubectl apply -n jenkins-app -f node-app-k8s/jenkins-app-svc.yml  
                 '''
             }
         }
