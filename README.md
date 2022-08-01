@@ -81,6 +81,7 @@ Deploy a pipeline that builds a new docker image from a simple node application,
 <p align='center' >
 <img src="images/Untitled.png"/>
 </p>
+
 ---
 
 ### 2- Add management instance as a Jenkins slave:
