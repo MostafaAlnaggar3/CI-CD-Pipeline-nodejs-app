@@ -74,9 +74,9 @@ Deploy a pipeline that builds a new docker image from a simple node application,
     
     private key: the private key that we generated on the instance
     
-
+<p align='center' >
 <img src="images/Untitled.png"/>
-
+</p>
 ---
 
 ### 2- Add management instance as a Jenkins slave:
@@ -101,7 +101,9 @@ Pipeline configurations:
 
 Build pipeline:
 
+<p align='center' >
 <img src="images/Untitled 6.png"/>
+</p>
 
 K8s resources:
 
