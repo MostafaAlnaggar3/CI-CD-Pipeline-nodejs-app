@@ -85,6 +85,20 @@ Deploy a pipeline that builds a new docker image from a simple node application,
 ---
 
 ### 2- Add management instance as a Jenkins slave:
+Prepare your instance:
+```bash
+# install docker
+$ sudo apt-get update
+$ sudo apt-get install docker.io
+$ sudo chmod 666 /var/run/docker.sock
+
+# install open-jdk
+$ sudo apt-get install -y openjdk-8-jdk
+
+# make jenkins_home dir
+$ mkdir jenkins_home
+```
+
 
 Node configurations:
 
